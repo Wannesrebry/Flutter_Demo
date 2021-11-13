@@ -25,3 +25,9 @@ Usefull info:
 - Build files at dir : build/windows/runner/release
 
 When in doubt read [Flutter Windows deploy docs](https://flutter.dev/desktop#additional-windows-requirements)
+
+
+
+## features 
+
+- named_routes: navigation using named routes, Drawer with ListTileFactory
