@@ -2,8 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/demos/features/named_routes/screens/second_screen.dart';
 
-
 class BasicDrawer extends StatelessWidget{
+  const BasicDrawer({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     ListTileFactory navItemFactory = ListTileFactory(context);
@@ -13,7 +14,6 @@ class BasicDrawer extends StatelessWidget{
     ]);
   }
 }
-
 
 class ListTileFactory{
   late BuildContext __context;

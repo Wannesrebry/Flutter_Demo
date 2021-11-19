@@ -1,20 +1,36 @@
 import 'package:flutter/material.dart';
 
-import 'drawer/drawer_factory.dart';
+void main(){
+  runApp(const IAmRichApp());
+}
 
-class HomeScreen extends StatefulWidget{
-  const HomeScreen({Key? key, required this.title}): super(key:key);
+class IAmRichApp extends StatelessWidget{
+  const IAmRichApp({Key? key}): super(key:key);
+
+  @override
+  Widget build(BuildContext context){
+    return MaterialApp(
+      title: "Flutter clean demo",
+      theme: ThemeData(
+          primarySwatch: Colors.blue
+      ),
+      home: const IAmRichHomePage(title: "I Am Rich Home Page"),
+    );
+  }
+}
+
+class IAmRichHomePage extends StatefulWidget{
+  const IAmRichHomePage({Key? key, required this.title}): super(key:key);
   final String title;
 
   @override
-  State<HomeScreen> createState() => _HomePage();
+  State<IAmRichHomePage> createState() => _IAmRichHomePageState();
 
 }
 
-class _HomePage extends State<HomeScreen>{
+class _IAmRichHomePageState extends State<IAmRichHomePage>{
   int _counter = 0;
 
-  //#region Counter   Methods
   void _incrementCounter(){
     setState(() {
       _counter++;
@@ -27,15 +43,12 @@ class _HomePage extends State<HomeScreen>{
     });
   }
 
-  //#endregion
-
   @override
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      drawer: const BasicDrawer(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

@@ -14,7 +14,7 @@ class NamedRoutesApp extends StatelessWidget{
     return MaterialApp(
       title: "Todo App",
       theme: ThemeData(
-          primarySwatch: Colors.orange
+          primarySwatch: Colors.blue
       ),
       home: const HomeScreen(title: 'Named Routes Example',),
       routes: <String, WidgetBuilder>{
